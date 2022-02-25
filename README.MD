@@ -6,7 +6,7 @@
 - [CRYPT-CHEF NFT - All in one NFT Toolbox](#crypt-chef-nft---all-in-one-nft-toolbox)
 - [Features](#features)
 - [How to use](#how-to-use)
-      - [1. Initialize Export Collection](#1-initialize-export-collection)
+      - [1. Initialize Project](#1-initialize-project)
       - [2. Export Collection](#2-export-collection)
       - [3. View Collection Summary](#3-view-collection-summary)
       - [4. View Rarity Table](#4-view-rarity-table)
@@ -51,18 +51,21 @@
 ## How to use
 
 
-##### 1. Initialize Export Collection 
+##### 1. Initialize Project
+ ```
+  nftgen.exe project init
+  ```
 
-```
-nftgen.exe project init
-```
+* User can create project config.json
+* Identify Layers and insert them into 
 
-- **Options**
+
+* Options
   | Option | Default         | Description  |
   | ------ | --------------- | ------------ |
   | path   | Excution folder | Project path |
 
-  Ex : 
+- Ex : 
 
   - Without project
     ```nftgen.exe project```

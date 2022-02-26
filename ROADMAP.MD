@@ -10,7 +10,7 @@
 - [ ] Support for multiple network (Solana, Cardano)
 - [ ] Upload your collection into cloud 
 
-### Phase 2 - Publish your collection into market place (Opensea, )
+### Phase 2 - Publish your collection into market place (Opensea,Rarible,Binance,etc )
 
 You can upload your collection into any market place
 

@@ -2,7 +2,7 @@
 ### CC NFT - TOOLBOX
 ![CRYPT-CHEF TOOL BOX](CC-TB.png)
 
-## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/v0.0.1)
+## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/beta-v0.0.1)
 
 **CC - NFT-TOOLBOX** is a tool to manage your all NFT related tasks without coding.
 
@@ -79,9 +79,9 @@ How to use
 
 
 #### 1. Initialize Project
- ```
-  nftgen.exe project init
-  ```
+```
+  nftbox.exe project init
+```
 
 * It will generate `config.json` file for the project
 
@@ -93,15 +93,15 @@ How to use
 - Ex : 
 
   - Without project
-    ```nftgen.exe project```
+    ```nftbox.exe project```
 
   - With project path
-    ```nftgen.exe project --path "<projectPath>"```
+    ```nftbox.exe project --path "<projectPath>"```
 
 
 #### 2. Export Collection
 ```
-nftgen.exe project generate
+nftbox.exe project generate
 ```
   * It will generate `images` and `json`(metadata) folders
 
@@ -114,7 +114,7 @@ nftgen.exe project generate
 
 #### 3. View Collection Summary
 ```
-nftgen.exe project summary
+nftbox.exe project summary
 ```
  * It will show a summary of your collection
 
@@ -124,7 +124,7 @@ nftgen.exe project summary
   | path   | Excution folder | Project path |
 #### 4. View Rarity Table
 ```
-nftgen.exe project rarity
+nftbox.exe project rarity
 ```
 * It will show a rarity table of your collection
 

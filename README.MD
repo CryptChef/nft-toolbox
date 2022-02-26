@@ -2,6 +2,8 @@
 ### CC NFT - TOOLBOX
 ![CRYPT-CHEF TOOL BOX](CC-TB.png)
 
+## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/v0.0.1)
+
 **CC - NFT-TOOLBOX** is a tool for manage your all nft related tasks without worrying devlopment
 
 Thier are lot of task in nft world as a designer need a help from developers. such as 
@@ -19,6 +21,7 @@ Table of content
 ----------------
 - [CRYPT-CHEF NFT - All in one  Toolbox](#crypt-chef-nft---all-in-one--toolbox)
   - [CC NFT - TOOLBOX](#cc-nft---toolbox)
+- [Download Latest release](#download-latest-release)
 - [Table of content](#table-of-content)
 - [Features](#features)
 - [How to use](#how-to-use)

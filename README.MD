@@ -22,20 +22,20 @@ Table of content
 - [Table of content](#table-of-content)
 - [Features](#features)
 - [How to use](#how-to-use)
-      - [1. Initialize Project](#1-initialize-project)
-      - [2. Export Collection](#2-export-collection)
-      - [3. View Collection Summary](#3-view-collection-summary)
-      - [4. View Rarity Table](#4-view-rarity-table)
+    - [1. Initialize Project](#1-initialize-project)
+    - [2. Export Collection](#2-export-collection)
+    - [3. View Collection Summary](#3-view-collection-summary)
+    - [4. View Rarity Table](#4-view-rarity-table)
 - [Support Configurations](#support-configurations)
-      - [1. Layer Order](#1-layer-order)
-      - [2. Incompatible Layers](#2-incompatible-layers)
-      - [3. Forced Combined Layers](#3-forced-combined-layers)
-      - [4. Project Description](#4-project-description)
-      - [5. Number of unique items](#5-number-of-unique-items)
-      - [6. Extra Attributes](#6-extra-attributes)
-      - [7. Extra Meta Data](#7-extra-meta-data)
-      - [8. Hash Image](#8-hash-image)
-      - [9. Base URI](#9-base-uri)
+    - [1. Layer Order](#1-layer-order)
+    - [2. Incompatible Layers](#2-incompatible-layers)
+    - [3. Forced Combined Layers](#3-forced-combined-layers)
+    - [4. Project Description](#4-project-description)
+    - [5. Number of unique items](#5-number-of-unique-items)
+    - [6. Extra Attributes](#6-extra-attributes)
+    - [7. Extra Meta Data](#7-extra-meta-data)
+    - [8. Hash Image](#8-hash-image)
+    - [9. Base URI](#9-base-uri)
 - [Contributing](#contributing)
 
 
@@ -78,7 +78,7 @@ How to use
 ----------
 
 
-##### 1. Initialize Project
+#### 1. Initialize Project
  ```
   nftgen.exe project init
   ```
@@ -99,7 +99,7 @@ How to use
     ```nftgen.exe project --path "<projectPath>"```
 
 
-##### 2. Export Collection
+#### 2. Export Collection
 ```
 nftgen.exe project generate
 ```
@@ -112,7 +112,7 @@ nftgen.exe project generate
   | workers | 1               | Number of parallel process          |
   | regen   | false           | Regenerate without change attribues |
 
-##### 3. View Collection Summary
+#### 3. View Collection Summary
 ```
 nftgen.exe project summary
 ```
@@ -122,7 +122,7 @@ nftgen.exe project summary
   | Option | Default         | Description  |
   | ------ | --------------- | ------------ |
   | path   | Excution folder | Project path |
-##### 4. View Rarity Table
+#### 4. View Rarity Table
 ```
 nftgen.exe project rarity
 ```
@@ -136,9 +136,9 @@ nftgen.exe project rarity
 Support Configurations
 ----------------------
 
-For compatiblity we use the same configuration format as [HasLips]()
+For compatiblity we use the same configuration format as *HashLips/hashlips_art_engine* 
 
-##### 1. Layer Order
+#### 1. Layer Order
 ```json
 "layerConfigurations":[
   {
@@ -151,7 +151,7 @@ For compatiblity we use the same configuration format as [HasLips]()
 }]
 ```
 
-##### 2. Incompatible Layers
+#### 2. Incompatible Layers
 ```json
 "incompatible": {
   "<TraiType/LayerName>*<TraitName>": [
@@ -172,7 +172,7 @@ For compatiblity we use the same configuration format as [HasLips]()
 ```
 In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **Mouth*1-01.png**]
 
-##### 3. Forced Combined Layers
+#### 3. Forced Combined Layers
 ```json
   "forcedCombinations": {
   "<TraiType/LayerName>*<TraitName>": [
@@ -195,17 +195,17 @@ In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **
 In here you need **Sunglass*1-01.png** with **Hat*2-01.png** and **Pipe*1-01.png**
 
 
-##### 4. Project Description
+#### 4. Project Description
 ```json
 "description": "<text>",
 ```
-##### 5. Number of unique items
+#### 5. Number of unique items
 ```json
 "uniqueDnaTorrance":<int>
 ```
 - Using this variable system will generate unique assets
 
-##### 6. Extra Attributes
+#### 6. Extra Attributes
 ```json
 "extraAttributes": [{
   "<name-1>": "<text>",
@@ -213,20 +213,20 @@ In here you need **Sunglass*1-01.png** with **Hat*2-01.png** and **Pipe*1-01.png
 }]
 ```
 
-##### 7. Extra Meta Data
+#### 7. Extra Meta Data
 ```json
 "extraMetadata": {
   "testName": "testValue"
 }
 ```   
 
-##### 8. Hash Image
+#### 8. Hash Image
 ```json
 "hashImages": false,
 ```
 Set this to `true` if metadata should contain image hash value
 
-##### 9. Base URI
+#### 9. Base URI
 
 ```json
 "baseURI": "<baseurl>"

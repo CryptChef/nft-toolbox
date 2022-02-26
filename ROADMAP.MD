@@ -1,6 +1,6 @@
 ## CC NFT-TOOLBOX Road MAP
 
-### Phase 1 - Generate Collection from art work
+### Phase 1 - Generate collection from art work
 
 - [X] Create project
 - [X] Generate collection
@@ -10,10 +10,10 @@
 - [ ] Support for multiple network (Solana, Cardano)
 - [ ] Upload your collection into cloud 
 
-### Phase 2 - Publish your collection
+### Phase 2 - Publish your collection into market place (Opensea, )
 
 You can upload your collection into any market place
 
-### Phase 2 - Mint your collection 
+### Phase 2 - Publish in your own marketplace with mint
 
 You can mint your collection and monitor collection stats

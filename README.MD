@@ -4,16 +4,13 @@
 
 ## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/v0.0.1)
 
-**CC - NFT-TOOLBOX** is a tool for manage your all nft related tasks without worrying devlopment
+**CC - NFT-TOOLBOX** is a tool to manage your all NFT related tasks without coding.
 
-Thier are lot of task in nft world as a designer need a help from developers. such as 
+**CC - NFT-TOOLBOX** This tool can,
 
-1. Generate Collection from art work
-2. Publish your collection
-3. Mint your collection
-
-We are ready to provide support for all of these tasks
-First of all we are happy to introduce our **Brand New NFT ToolBox** core with support of
+1. [x] Generate collection from art work
+2. [ ] Publish your collection into market place (Opensea, )
+3. [ ] Publish in your own marketplace with mint
 
 Please check our Project [road map](ROADMAP.MD) for more details.
 
@@ -51,18 +48,18 @@ Features
   - config.json 
       1. Layer order configuration
       2. Format asset size
-      3.  Base URI
-      4. Forcecombination
-      5. Incompatible Traits
-      6. Default Layer order configuration included
+      3. Base URI
+      4. Force combination
+      5. Incompatible traits
+      6. Default layer order configuration included
 
 - **Generate project**
-    - Base on configuration file
+    - Based on configuration file
     - Support for multiple workers
-    - Check all required details at the start
+    - Review all required details at start
       - Layers
       - Traits
-      - Possible Unique asset count
+      - Possible unique asset count
   
 
 - **Get Rarity Table**
@@ -71,8 +68,8 @@ Features
 
 - **Get Summary**
     - Number of layers
-    - Number of Traits
-    - Number of Uniques assets
+    - Number of traits
+    - Number of unique assets
     - Total collection size
 
 
@@ -86,9 +83,7 @@ How to use
   nftgen.exe project init
   ```
 
-* User can create project config.json
-* Identify Layers and insert them into 
-
+* It will generate `config.json` file for the project
 
 * Options
   | Option | Default         | Description  |
@@ -108,6 +103,7 @@ How to use
 ```
 nftgen.exe project generate
 ```
+  * It will generate `images` and `json`(metadata) folders
 
 - **Options**
   | Option  | Default         | Description                         |
@@ -120,6 +116,8 @@ nftgen.exe project generate
 ```
 nftgen.exe project summary
 ```
+ * It will show a summary of your collection
+
 - **Options**
   | Option | Default         | Description  |
   | ------ | --------------- | ------------ |
@@ -128,6 +126,8 @@ nftgen.exe project summary
 ```
 nftgen.exe project rarity
 ```
+* It will show a rarity table of your collection
+
 - **Options**
   | Option | Default         | Description  |
   | ------ | --------------- | ------------ |
@@ -136,110 +136,101 @@ nftgen.exe project rarity
 Support Configurations
 ----------------------
 
+For compatiblity we use the same configuration format as [HasLips]()
+
 ##### 1. Layer Order
-   ```json
-   "layerConfigurations":[
-     {
-        "growEditionSizeTo": 10000,
-			  "layersOrder": [{
-					"name": "<Layer Folder Name>"
-				}
-      ]
-    }]
-   ```
-
-      * We can have multiple layerConfiguration in here  and layerConfiguration can have one layerOrder
-
+```json
+"layerConfigurations":[
+  {
+    "growEditionSizeTo": 10000,
+    "layersOrder": [
+    {
+      "name": "<Layer Folder Name>"
+    }
+  ]
+}]
+```
 
 ##### 2. Incompatible Layers
-   ```json
-    "incompatible": {
-      "<TraiType/LayerName>*<TraitName>": [
-        "<TraiType/LayerName>*<TraitName>",
-         "<TraiType/LayerName>*<TraitName>",
-      ]
-    }
-   ```
-    - Some traits are not compatible with some other traits. 
+```json
+"incompatible": {
+  "<TraiType/LayerName>*<TraitName>": [
+    "<TraiType/LayerName>*<TraitName>",
+    "<TraiType/LayerName>*<TraitName>",
+  ]
+}
+```
+- Not all traits are compatible with each other. 
 
-
-    **Ex**
-    ```json
-
-    "incompatible": {
-    "Sunglass*1-01.png": [
-      "Beard*1-01.png",
-      "Mouth*1-01.png"
-    ]}
-    ```
-    In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **Mouth*1-01.png**]
+**Example**
+```json
+"incompatible": {
+   "Sunglass*1-01.png": [
+     "Beard*1-01.png",
+     "Mouth*1-01.png"
+]}
+```
+In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **Mouth*1-01.png**]
 
 ##### 3. Forced Combined Layers
-    ```json
-      "forcedCombinations": {
-      "<TraiType/LayerName>*<TraitName>": [
-        "<TraiType/LayerName>*<TraitName>",
-        "<TraiType/LayerName>*<TraitName>"
-    ]}
-    ```
-    Some trait required another trait by force
+```json
+  "forcedCombinations": {
+  "<TraiType/LayerName>*<TraitName>": [
+    "<TraiType/LayerName>*<TraitName>",
+    "<TraiType/LayerName>*<TraitName>"
+]}
+```
 
-    **Ex**
-    ```json
-    "forcedCombinations": {
-      "Sunglass*1-01.png": [
-        "Hat*2-01.png",
-        "Pipe*1-01.png"
-      ]
-    }
-    ```
-    In here you need **Sunglass*1-01.png** with **Hat*2-01.png** and **Pipe*1-01.png**
+- Some traits depend on other traits
+
+*Example 1*
+```json
+"forcedCombinations": {
+  "Sunglass*1-01.png": [
+    "Hat*2-01.png",
+    "Pipe*1-01.png"
+  ]
+}
+```
+In here you need **Sunglass*1-01.png** with **Hat*2-01.png** and **Pipe*1-01.png**
 
 
 ##### 4. Project Description
-    ```json
-    "description": "<text>",
-    ```
+```json
+"description": "<text>",
+```
 ##### 5. Number of unique items
-   ```json
-    "uniqueDnaTorrance":<int>
-   ```
-    Using this variable system will generate unique number of assets without repeating
+```json
+"uniqueDnaTorrance":<int>
+```
+- Using this variable system will generate unique assets
 
 ##### 6. Extra Attributes
-    ```json
-    "extraAttributes": [{
-      "<name-1>": "<text>",
-      "<name-2>": <value>
-    }]
-    ```
-
-    These extra data can append with original asset metadata attributes
-
+```json
+"extraAttributes": [{
+  "<name-1>": "<text>",
+  "<name-2>":  <value>
+}]
+```
 
 ##### 7. Extra Meta Data
-    ```json
-        "extraMetadata": {
-            "testName": "testValue"
-          },
-    ```   
-
-  These extra meta data append to the original asset metadata
+```json
+"extraMetadata": {
+  "testName": "testValue"
+}
+```   
 
 ##### 8. Hash Image
-    ```json
-      "hashImages": false,
-    ```
-
-    Image need uniques hash value you have to make this true
+```json
+"hashImages": false,
+```
+Set this to `true` if metadata should contain image hash value
 
 ##### 9. Base URI
 
-    ```json
-    "baseURI": "<baseurl>"
-    ```
-  In here system update all meta data with your collection baseURI 
-
+```json
+"baseURI": "<baseurl>"
+```
 
 Contributing
 ------------

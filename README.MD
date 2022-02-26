@@ -131,16 +131,19 @@ nftgen.exe project rarity
       ]
     }
    ```
-     - Ex
+    - Some traits are not compatible with some other traits. 
+
+
+    **Ex**
     ```json
 
     "incompatible": {
-    "testSunglass*1-01.png": [
+    "Sunglass*1-01.png": [
       "Beard*1-01.png",
       "Mouth*1-01.png"
     ]}
     ```
-
+    In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **Mouth*1-01.png**]
 
 3. Forced Combined Layers
     ```json
@@ -150,17 +153,20 @@ nftgen.exe project rarity
         "<TraiType/LayerName>*<TraitName>"
     ]}
     ```
-    - Ex
+    Some trait required another trait by force
+
+    **Ex**
     ```json
     "forcedCombinations": {
       "Sunglass*1-01.png": [
-        "Hat*2-01.png"
-      ],
-      "Hat*3-01.png": [
+        "Hat*2-01.png",
         "Pipe*1-01.png"
       ]
     }
     ```
+    In here you need **Sunglass*1-01.png** with **Hat*2-01.png** and **Pipe*1-01.png**
+
+
 4. Project Description
     ```json
     "description": "<text>",
@@ -169,6 +175,8 @@ nftgen.exe project rarity
    ```json
     "uniqueDnaTorrance":<int>
    ```
+    Using this variable system will generate unique number of assets without repeating
+
 6. Extra Attributes
     ```json
     "extraAttributes": [{
@@ -176,21 +184,31 @@ nftgen.exe project rarity
       "<name-2>": <value>
     }]
     ```
+
+    These extra data can append with original asset metadata attributes
+
+
 7. Extra Meta Data
     ```json
         "extraMetadata": {
             "testName": "testValue"
           },
     ```   
+
+  These extra meta data append to the original asset metadata
+
 8. Hash Image
     ```json
       "hashImages": false,
     ```
+
+    Image need uniques hash value you have to make this true
+
 9. Base URI
 
     ```json
     "baseURI": "<baseurl>"
     ```
-
+  In here system update all meta data with your collection baseURI 
 
 

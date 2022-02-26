@@ -3,6 +3,8 @@
 ![CRYPT-CHEF TOOL BOX](CC-TB.png)
 
 
+
+
 - [CRYPT-CHEF NFT - All in one NFT Toolbox](#crypt-chef-nft---all-in-one-nft-toolbox)
 - [Features](#features)
 - [How to use](#how-to-use)
@@ -116,6 +118,10 @@ nftgen.exe project rarity
       ]
     }]
    ```
+
+      * We can have multiple layerConfiguration in here  and layerConfiguration can have one layerOrder
+
+
 2. Incompatible Layers
    ```json
     "incompatible": {
@@ -125,19 +131,66 @@ nftgen.exe project rarity
       ]
     }
    ```
-3. Forced Combined Layers
+     - Ex
     ```json
 
-
-
+    "incompatible": {
+    "testSunglass*1-01.png": [
+      "Beard*1-01.png",
+      "Mouth*1-01.png"
+    ]}
     ```
-6. Project Description
-7. Number of unique items
-8. Trait Value Organizer
-9. Hash Image
-10. Base URI
 
 
+3. Forced Combined Layers
+    ```json
+      "forcedCombinations": {
+      "<TraiType/LayerName>*<TraitName>": [
+        "<TraiType/LayerName>*<TraitName>",
+        "<TraiType/LayerName>*<TraitName>"
+    ]}
+    ```
+    - Ex
+    ```json
+    "forcedCombinations": {
+      "Sunglass*1-01.png": [
+        "Hat*2-01.png"
+      ],
+      "Hat*3-01.png": [
+        "Pipe*1-01.png"
+      ]
+    }
+    ```
+4. Project Description
+    ```json
+    "description": "<text>",
+    ```
+5. Number of unique items
+   ```json
+    "uniqueDnaTorrance":<int>
+   ```
+6. Extra Attributes
+    ```json
+    "extraAttributes": [{
+      "<name-1>": "<text>",
+      "<name-2>": <value>
+    }]
+    ```
+7. Extra Meta Data
+    ```json
+        "extraMetadata": {
+            "testName": "testValue"
+          },
+    ```   
+8. Hash Image
+    ```json
+      "hashImages": false,
+    ```
+9. Base URI
+
+    ```json
+    "baseURI": "<baseurl>"
+    ```
 
 
 

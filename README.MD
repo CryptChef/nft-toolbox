@@ -9,7 +9,7 @@
 **CC - NFT-TOOLBOX** This tool can,
 
 1. [x] Generate collection from art work
-2. [ ] Publish your collection into market place (Opensea, )
+2. [ ] Publish your collection into market place (Opensea,Rarible,Binance,etc)
 3. [ ] Publish in your own marketplace with mint
 
 Please check our Project [road map](ROADMAP.MD) for more details.

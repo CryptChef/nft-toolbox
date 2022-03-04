@@ -38,7 +38,7 @@ Table of content
     - [9. Base URI](#9-base-uri)
     - [10. Shuffle Layer Configurations](#10-shuffle-layer-configurations)
     - [11. Default rarity weight value](#11-default-rarity-weight-value)
-    - [12. Default rarity weight value](#12-default-rarity-weight-value)
+    - [12. Generate Background](#12-generate-background)
 - [Contributing](#contributing)
 
 
@@ -267,7 +267,7 @@ When you have multiple layer configurations and you want to shuffle the generate
 ```
 In here we don't need to keep each trait with ratity value. For that we use this one as the default rarity value. 
 
-#### 12. Default rarity weight value
+#### 12. Generate Background
 
 ```json
 "background": {

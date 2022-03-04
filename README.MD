@@ -2,7 +2,7 @@
 ### CC NFT - TOOLBOX
 ![CRYPT-CHEF TOOL BOX](CC-TB.png)
 
-## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/beta-v0.0.1)
+## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/v0.0.5-beta)
 
 **CC - NFT-TOOLBOX** is a tool to manage your all NFT related tasks without coding.
 
@@ -36,6 +36,9 @@ Table of content
     - [7. Extra Meta Data](#7-extra-meta-data)
     - [8. Hash Image](#8-hash-image)
     - [9. Base URI](#9-base-uri)
+    - [10. Shuffle Layer Configurations](#10-shuffle-layer-configurations)
+    - [11. Default rarity weight value](#11-default-rarity-weight-value)
+    - [12. Default rarity weight value](#12-default-rarity-weight-value)
 - [Contributing](#contributing)
 
 
@@ -106,11 +109,21 @@ nftbox.exe project generate
   * It will generate `images` and `json`(metadata) folders
 
 - **Options**
-  | Option  | Default         | Description                         |
-  | ------- | --------------- | ----------------------------------- |
-  | path    | Excution folder | Project path                        |
-  | workers | 1               | Number of parallel process          |
-  | regen   | false           | Regenerate without change attribues |
+  | Option  | Default        |Options | Description                         |
+  | ------- | ---------------|--------| ----------------------------------- |
+  | path    | Excution folder|        | Project path                        |
+  | workers | 1              |        | Number of parallel process          |
+  | regen   | new            |new, all,image,meta| Regenerate without change attribues |
+
+  Regenerate only meta data
+  ```
+  nftbox.exe project generate --regen meta
+  ```
+
+  Regenerate only images
+  ```
+  nftbox.exe project generate --regen image
+  ```
 
 #### 3. View Collection Summary
 ```
@@ -145,11 +158,17 @@ For compatiblity we use the same configuration format as *HashLips/hashlips_art_
     "growEditionSizeTo": 10000,
     "layersOrder": [
     {
-      "name": "<Layer Folder Name>"
+      "name": "<Layer Folder Name>",
+      "options": {
+            "displayName": "Ear"
+          }
     }
   ]
 }]
 ```
+You can have options in layers order
+
+1. Display name - this will replace the layer name in metadata.json
 
 #### 2. Incompatible Layers
 ```json
@@ -165,12 +184,12 @@ For compatiblity we use the same configuration format as *HashLips/hashlips_art_
 **Example**
 ```json
 "incompatible": {
-   "Sunglass*1-01.png": [
-     "Beard*1-01.png",
-     "Mouth*1-01.png"
+   "Sunglass*1-01": [
+     "Beard*1-01",
+     "Mouth*1-01"
 ]}
 ```
-In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **Mouth*1-01.png**]
+In here you need **Sunglass*1-01** not combined with [**Beard*1-01**, **Mouth*1-01**]
 
 #### 3. Forced Combined Layers
 ```json
@@ -186,13 +205,13 @@ In here you need **Sunglass*1-01.png** not combined with [**Beard*1-01.png**, **
 *Example 1*
 ```json
 "forcedCombinations": {
-  "Sunglass*1-01.png": [
-    "Hat*2-01.png",
-    "Pipe*1-01.png"
+  "Sunglass*1-01": [
+    "Hat*2-01",
+    "Pipe*1-01"
   ]
 }
 ```
-In here you need **Sunglass*1-01.png** with **Hat*2-01.png** and **Pipe*1-01.png**
+In here you need **Sunglass*1-01** with **Hat*2-01** and **Pipe*1-01**
 
 
 #### 4. Project Description
@@ -231,6 +250,37 @@ Set this to `true` if metadata should contain image hash value
 ```json
 "baseURI": "<baseurl>"
 ```
+
+#### 10. Shuffle Layer Configurations
+
+```json
+"shuffleLayerConfigurations": "true|false"
+```
+
+When you have multiple layer configurations and you want to shuffle the generated images without order, keep this `true`
+
+
+#### 11. Default rarity weight value
+
+```json
+"defaultRarity":100
+```
+In here we don't need to keep each trait with ratity value. For that we use this one as the default rarity value. 
+
+#### 12. Default rarity weight value
+
+```json
+"background": {
+    "generate": true,
+    "brightness": "20"
+}
+```
+`"generate": true|false` Enable geneate background image
+`"brightness": "<int>"` Change brightness level
+
+
+  
+
 
 Contributing
 ------------

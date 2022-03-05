@@ -1,6 +1,6 @@
 ## Donations
 
-** Thank you so much for using CC - NFT Toolbox, it's very thankfull for us. **
+**Thank you so much for using CC - NFT Toolbox, it's very thankfull for us.**
 
 CC - NFT Toolbox is free to use with no advertisements or collecting your data, it's for that reason we cheekily ask for you to consider a donation if you've found CC - NFT Toolbox useful.
 

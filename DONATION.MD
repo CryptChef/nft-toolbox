@@ -5,7 +5,7 @@
 CC - NFT Toolbox is free to use with no advertisements or collecting your data, it's for that reason we cheekily ask for you to consider a donation if you've found CC - NFT Toolbox useful.
 
 
-### ANY ERC 20 (ETH)
+<!-- ### ANY ERC 20 (ETH)
 
 `0xC0Ca2e93e60d63Ec9c071F0756f8F57777aACa79`
 
@@ -22,7 +22,7 @@ CC - NFT Toolbox is free to use with no advertisements or collecting your data, 
 
 `bc1q8fysgka27d77frdn8725gv7pavwj6pwskt8hfy`
 
-![QR CODE](assets/wallet/BITCOIN.png)
+![QR CODE](assets/wallet/BITCOIN.png) -->
 
 ### Credit card payments
 

@@ -6,7 +6,7 @@
 
 ## Video guide
 
-[![How to generate 10,000 NFTs  in 5 minutes | #NO CODE](https://img.youtube.com/vi/mz0IgoY_mzo/0.jpg)](https://www.youtube.com/watch?v=mz0IgoY_mzo "How to generate 10,000 NFTs  in 5 minutes | #NO CODE")
+[![How to generate 10,000 NFTs  in 5 minutes | #NO CODE](https://img.youtube.com/vi/bp8v9E7LNRw/0.jpg)](https://www.youtube.com/watch?v=bp8v9E7LNRw "How to generate 10,000 NFTs  in 5 minutes | #NO CODE")
 
 **CC - NFT-TOOLBOX** is a tool to manage your all NFT related tasks without coding.
 

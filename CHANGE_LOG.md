@@ -1,4 +1,15 @@
 ## Versions Release Note
+#### v0.0.7-beta
+
+1. Improve documentation
+2. Improve performance
+3. Improve code style
+4. Improve code quality
+5. Improve CLI options description
+
+#### v0.0.6-beta
+
+1. Fix export worker pool issue
 
 #### v0.0.5-beta
 

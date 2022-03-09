@@ -49,6 +49,7 @@ Table of content
     - [10. Shuffle Layer Configurations](#10-shuffle-layer-configurations)
     - [11. Default rarity weight value](#11-default-rarity-weight-value)
     - [12. Generate Background](#12-generate-background)
+    - [13. Restart Layer Index and](#13-restart-layer-index-and)
 - [Contributing](#contributing)
 
 
@@ -165,7 +166,7 @@ For compatiblity we use the same configuration format as *HashLips/hashlips_art_
 ```json
 "layerConfigurations":[
   {
-    "growEditionSizeTo": 10000,
+    "editionSize": 10000,
     "layersOrder": [
     {
       "name": "<Layer Folder Name>",
@@ -176,6 +177,9 @@ For compatiblity we use the same configuration format as *HashLips/hashlips_art_
   ]
 }]
 ```
+
+`editionSize` - How many numbers of assets you need from this layer order configuration.
+
 You can have options in layers order
 
 1. Display name - this will replace the layer name in metadata.json
@@ -288,8 +292,23 @@ In here we don't need to keep each trait with ratity value. For that we use this
 `"generate": true|false` Enable geneate background image
 `"brightness": "<int>"` Change brightness level
 
+#### 13. Restart Layer Index and 
 
-  
+```json
+"layerConfigurations": [
+  {
+      "restartIndex":true,
+      "namePrefix":'<string>||null'
+      ...
+  }
+]
+```
+Name + Number prefix and reset for configuration sets
+
+If you are using the generator with multiple layerConfiguration objects to generate different species/genders/types, it is possible to add a name prefix and a reset counter for the name, so the token names start at 1 for each type.
+
+for example, if you are creating multiple animals, and each animal should start with Animal #1, but the token numbers should increment as normal, you can use the above `namePrefix` and `restartIndex` properties to acheive this.
+
 
 
 Contributing

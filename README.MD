@@ -2,7 +2,7 @@
 ### CC NFT - TOOLBOX
 ![CRYPT-CHEF TOOL BOX](CC-TB.png)
 
-## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/v0.0.8-beta)
+## [Download Latest release](https://github.com/CryptChef/nft-toolbox/releases/tag/v0.0.9-beta)
 
 ## Video guide
 
